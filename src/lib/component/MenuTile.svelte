@@ -1,7 +1,9 @@
 <script lang="ts">
+	import MenuPrice from '../lib/component/MenuPrice.svelte';
 	export let name: string;
 	export let description: string;
 	export let photoUrl: string;
+	export let prices: {label:string; price:number}[];
 </script>
 
 <div class="menu-tile">
@@ -12,14 +14,16 @@
 	<div class="menu-tile-description">
 		{description}
 	</div>
-	<!-- <div class="menu-price-row">
-      <span class="price-description"></span>
-      <span>35</span>
-    </div>
-    <div class="menu-price-row">
-      <span class="price-description">+ Grilled Salmon</span>
-      <span>55</span>
-    </div> -->
+	</div>
+	<div>
+		<div class="menu-price-row">
+		<span class="price-description">{label}</span>
+		<span>{price}</span>
+		<div>
+			<span class="price-description">{label}</span>
+		<span>{price}</span>
+		</div>
+	</div>
 </div>
 
 <style>

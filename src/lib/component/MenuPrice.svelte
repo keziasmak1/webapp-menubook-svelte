@@ -3,7 +3,8 @@
     export let price:Number;
 </script>
 
-<div><div class="menu-price-row">
+<div>
+    <div class="menu-price-row">
     <span class="price-description">{label}</span>
     <span>{price}</span>
     <div>
