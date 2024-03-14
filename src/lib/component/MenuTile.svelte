@@ -1,9 +1,9 @@
 <script lang="ts">
-	import MenuPrice from '../lib/component/MenuPrice.svelte';
+	import MenuPrice from './MenuPrice.svelte';
 	export let name: string;
 	export let description: string;
 	export let photoUrl: string;
-	export let prices: {label:string; price:number}[];
+	export let prices: { label: string; price: number }[];
 </script>
 
 <div class="menu-tile">
@@ -14,16 +14,10 @@
 	<div class="menu-tile-description">
 		{description}
 	</div>
-	</div>
-	<div>
-		<div class="menu-price-row">
-		<span class="price-description">{label}</span>
-		<span>{price}</span>
-		<div>
-			<span class="price-description">{label}</span>
-		<span>{price}</span>
-		</div>
-	</div>
+
+	{#each prices as p}
+		<MenuPrice label={p.label} price={p.price} />
+	{/each}
 </div>
 
 <style>
