@@ -1,15 +1,13 @@
-<script lang=ts>
-    export let label:string;
-    export let price:number;
+<script lang="ts">
+	export let label: string;
+	export let price: number;
 </script>
 
-<div>
-    <div class="menu-price-row">
-    <span class="price-description">{label}</span>
-    <span>{price}</span>
+<div class="menu-price-row">
+	<span class="price-description">{label}</span>
+	<span>{price}</span>
 </div>
 
-</div>
 <style>
 	div.menu-price-row {
 		display: flex;
